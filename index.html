@@ -3,13 +3,13 @@
 <head>
     <title>PHP ReCAPTCHA Tutorial</title>
 </head>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer>
 </script>
 <body>
-    <form action="index.php" method="post">
-        <input type="text" name="username" placeholder="What is your name?">
-        <input type="submit" name="submit" value="Save">
+    <form action="?" method="POST">
         <div class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
+        <br />
+        <input type="submit" value="Submit">
     </form>
 </body>
 <script type="text/javascript">
