@@ -1,25 +1,27 @@
-<html>
+<!DOCTYPE html>
+<lang html>
 
-<head>
-    <title>PHP ReCAPTCHA Tutorial</title>
-</head>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer>
-</script>
-<body>
-    <form action="?" method="POST">
-        <div class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
-        <br />
-        <input type="submit" value="Submit">
-    </form>
-</body>
-<script type="text/javascript">
-    var onloadCallback = function () {
-        alert("grecaptcha is ready!");
-        grecaptcha.render('html_element', {
-            'sitekey': '6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd'
-        });
-    };
-    
-</script>
+    <head>
+        <title>PHP ReCAPTCHA Tutorial</title>
+    </head>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer>
+    </script>
 
-</html>
+    <body>
+        <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
+            <br />
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            alert("grecaptcha is ready!");
+            grecaptcha.render('html_element', {
+                'sitekey': '6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd'
+            });
+        };
+
+    </script>
+
+    </html>
