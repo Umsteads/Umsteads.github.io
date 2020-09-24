@@ -5,7 +5,7 @@
     <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
     <script type="text/javascript">
         var verifyCallback = function (response) {
-            console.log(response);
+            alert(response);
         };
         var widgetId1;
         var widgetId2;
@@ -30,7 +30,7 @@
 
 <body>
     <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
-    <form action="javascript:console.log(grecaptcha.getResponse(widgetId1));">
+    <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
         <div id="example1"></div>
         <br>
         <input type="submit" value="getResponse">
