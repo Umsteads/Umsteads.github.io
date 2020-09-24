@@ -14,16 +14,3 @@
             echo "Verification failed!";
     }
 ?>
-<html>
-    <head>
-        <title>PHP ReCAPTCHA Tutorial</title>
-    </head>
-    <body>
-        <form action="index.php" method="post">
-            <input type="text" name="username" placeholder="What is your name?">
-            <input type="submit" name="submit" value="Save">
-            <div class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
-        </form>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-    </body>
-</html>
