@@ -1,20 +1,25 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <lang html>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script type="text/javascript">
-    if (grecaptcha.getResponse() == "success") {
-        console.log(1123)
-        function Redirect() {
-            window.location.href = "example.com"; // Correct here
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        console.log(grecaptcha.getResponse())
+        if (grecaptcha.getResponse() == "success") {
+            console.log(1123)
+            function Redirect() {
+                window.location.href = "example.com"; // Correct here
+            }
+            document.write("You will be redirected to a new page in 5 seconds ");
+            setTimeout(Redirect, 5000); // Correct here
         }
-        document.write("You will be redirected to a new page in 5 seconds ");
-        setTimeout(Redirect, 5000); // Correct here
-    }
-    else alert("You can't proceed!");
-</script>
+        else alert("You can't proceed!");
+    </script>
 
-<body>
-    <div data-type="image" class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
-</body>
-</html>
+    <body>
+        <div data-type="image" class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
+
+    </body>
+
+    </html>
+
