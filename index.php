@@ -1,21 +1,21 @@
-<?php
-define('SITE_KEY', '6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd');
-define('SECRET_KEY', '6Lcl8MYZAAAAAIJLgXvCyVOAIpf86orARsZCmtG7');
+<!-- <?php
+// define('SITE_KEY', '6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd');
+// define('SECRET_KEY', '6Lcl8MYZAAAAAIJLgXvCyVOAIpf86orARsZCmtG7');
 
-if($_POST){
-    function getCaptcha($SecretKey){
-        $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
-        $Return = json_decode($Response);
-        return $Return;
-    }
-    $Return = getCaptcha($_POST['g-recaptcha-response']);
-    //var_dump($Return);
-    if($Return->success == true && $Return->score > 0.5){
-        echo "Succes!";
-    }else{
-        echo "You are a Robot!!";
-    }
-}
+// if($_POST){
+//     function getCaptcha($SecretKey){
+//         $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
+//         $Return = json_decode($Response);
+//         return $Return;
+//     }
+//     $Return = getCaptcha($_POST['g-recaptcha-response']);
+//     //var_dump($Return);
+//     if($Return->success == true && $Return->score > 0.5){
+//         echo "Succes!";
+//     }else{
+//         echo "You are a Robot!!";
+//     }
+// }
 
 ?>
 
@@ -44,4 +44,4 @@ if($_POST){
     });
     </script>
 </body>
-</html>
+</html> -->
