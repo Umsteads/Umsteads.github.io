@@ -20,6 +20,9 @@
             grecaptcha.render('html_element', {
                 'sitekey': '6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd'
             });
+            grecaptcha.getResponse(() => {
+                console.log(this)
+            })
         };
 
     </script>
