@@ -1,3 +1,4 @@
+$(document).ready(function(){
 document.getElementById("my_captcha_form").addEventListener("submit", function (evt) {
 
     var response = grecaptcha.getResponse();
@@ -7,8 +8,9 @@ document.getElementById("my_captcha_form").addEventListener("submit", function (
         evt.preventDefault();
         return false;
     }
-    console.log(response)
+    return console.log(response)
     //captcha verified
     //do the rest of your validations here
 
+});
 });
