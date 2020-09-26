@@ -4,8 +4,9 @@
     <title>reCaptcha validation demo</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="jquery-3.5.1.min.js"></script>
+    
     <script>
-    function dostuff() {
+    function doStuff() {
         var response = grecaptcha.getResponse();
         if (response.length == 0) {
             //reCaptcha not verified
@@ -15,7 +16,8 @@
         }
         return console.log(response)
 
-    }    </script>
+    }   
+     </script>
 </head>
 
 <body>
