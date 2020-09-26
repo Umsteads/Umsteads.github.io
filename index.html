@@ -1,77 +1,19 @@
-<!DOCTYPE html>
-<html lang="zh">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>ReCaptcha</title>
-    <link href="./css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <!--Google reCaptcha SITE_KEY-->
-    <script src="https://recaptcha.net/recaptcha/api.js?render=%SITE-KEY%"></script>
-    <script>
-        grecaptcha.ready(function () {
-            //Google reCaptcha SITE_KEY
-            grecaptcha.execute('6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd', { action: 'login' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
+    <title>reCaptcha validation demo</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
-<nav class="light-blue darken-1" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="brand-logo left hide-on-med-and-down">Server Anti-Bot Captcha
-		</a>
+    <div class="form_container">
+        <form action="#" id="my_captcha_form">
+            <div class="g-recaptcha" data-sitekey="6Lcl8MYZAAAAANqLWIAhAbMk2TBdUmfU-aTu0Ltd"></div>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
     </div>
-</nav>
-
-<main>
-
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <br><br>
-            <h1 class="header center light-blue-text" id="status">Loading</h1>
-            <div class="row center">
-                <form name="dataForm" id="dataForm" action="callback.php" method="POST">
-                    <label for="username_input">Minecraft ID:</label><input type="text" id="username_input" name="username">
-                    <!--suppress HtmlDeprecatedTag -->
-                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                    <a href="javascript:void(0)" id="submit-button" class="btn-large waves-effect light-blue" onclick="submitForm();">Verify</a>
-                </form>
-            </div>
-            <br><br>
-        </div>
-    </div>
-</main>
-
-<script>
-    var url = new URL(window.location.href);
-	//recaptcha.html?user=MCBBS
-    var username = url.searchParams.get("user");
-    if(username === null){
-        document.getElementById("status").innerHTML = "Please enter your username";
-
-    }else {
-        document.getElementById("status").innerHTML = "Hello：" + username;
-        document.getElementById("username_input").value=username;
-    }
-
-</script>
-<script>
-    function submitForm() {
-        var form = document.forms['dataForm'];
-        if(document.getElementById("username_input").value === null || document.getElementById("username_input").value === ""){
-            alert("You not input your minecraft id yet！")
-        }else{
-            form.submit();
-        }
-    }
-</script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.min.js"></script>
-<script type="application/javascript">
-    $(document).ready(function() {
-        $('.modal').modal();
-    });
-</script>
 </body>
+
 </html>
